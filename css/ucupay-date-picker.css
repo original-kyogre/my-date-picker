@@ -1,0 +1,256 @@
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  background-color: #aaa;
+}
+.container {
+  width: 375px;
+  height: 677px;
+  background-color: #fff;
+  margin: 2rem auto;
+}
+.ucupay-date-picker {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #111;
+  font-size: 16px;
+  z-index: 1024;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.ucupay-date-picker.static {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.ucupay-date-picker.hide {
+  display: none !important;
+}
+.ucupay-date-picker.out {
+  transform: translate3d(0, 2em, 0);
+  opacity: 0;
+}
+.ucupay-date-picker .ucupay-dp-container {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item header {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item header:after,
+.ucupay-date-picker .ucupay-dp-calendar-item header:before {
+  content: '';
+  margin-top: 0.7rem;
+  width: 98px;
+  height: 1px;
+  background-color: #ccc;
+  transform: scale(0.5);
+}
+.ucupay-date-picker .ucupay-dp-calendar-item h4 {
+  margin: 0;
+  padding-top: 0.7rem;
+  color: #333;
+  font-weight: normal;
+  text-align: center;
+  line-height: 3.25;
+  font-size: 18px;
+  letter-spacing: 0px;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li {
+  list-style: none;
+  min-width: 14.285714%;
+  max-width: 14.285714%;
+  flex: 1 1 14.285714%;
+  text-align: center;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-0 {
+  counter-reset: date;
+  flex: 0 0 0%;
+  min-width: 0%;
+  max-width: 100%;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-0 ~ :nth-child(7n + 8),
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-0 ~ :nth-child(7n + 9) {
+  color: #fab83d;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li:not(:first-child):before {
+  font-size: 18px;
+  line-height: 22px;
+  content: counter(date);
+  counter-increment: date;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-1 {
+  counter-reset: date;
+  flex: 1 1 14.285714%;
+  min-width: 14.285714%;
+  max-width: 100%;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-1 ~ :nth-child(7n + 7),
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-1 ~ :nth-child(7n + 8) {
+  color: #fab83d;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li:not(:first-child):before {
+  font-size: 18px;
+  line-height: 22px;
+  content: counter(date);
+  counter-increment: date;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-2 {
+  counter-reset: date;
+  flex: 2 2 28.571428%;
+  min-width: 28.571428%;
+  max-width: 100%;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-2 ~ :nth-child(7n + 6),
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-2 ~ :nth-child(7n + 7) {
+  color: #fab83d;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li:not(:first-child):before {
+  font-size: 18px;
+  line-height: 22px;
+  content: counter(date);
+  counter-increment: date;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-3 {
+  counter-reset: date;
+  flex: 3 3 42.857142%;
+  min-width: 42.857142%;
+  max-width: 100%;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-3 ~ :nth-child(7n + 5),
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-3 ~ :nth-child(7n + 6) {
+  color: #fab83d;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li:not(:first-child):before {
+  font-size: 18px;
+  line-height: 22px;
+  content: counter(date);
+  counter-increment: date;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-4 {
+  counter-reset: date;
+  flex: 4 4 57.142856%;
+  min-width: 57.142856%;
+  max-width: 100%;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-4 ~ :nth-child(7n + 4),
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-4 ~ :nth-child(7n + 5) {
+  color: #fab83d;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li:not(:first-child):before {
+  font-size: 18px;
+  line-height: 22px;
+  content: counter(date);
+  counter-increment: date;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-5 {
+  counter-reset: date;
+  flex: 5 5 71.42857000000001%;
+  min-width: 71.42857000000001%;
+  max-width: 100%;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-5 ~ :nth-child(7n + 3),
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-5 ~ :nth-child(7n + 4) {
+  color: #fab83d;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li:not(:first-child):before {
+  font-size: 18px;
+  line-height: 22px;
+  content: counter(date);
+  counter-increment: date;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-6 {
+  counter-reset: date;
+  flex: 6 6 85.714284%;
+  min-width: 85.714284%;
+  max-width: 100%;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-6 ~ :nth-child(7n + 2),
+.ucupay-date-picker .ucupay-dp-calendar-item ul li.ucupay-dp-empty-6 ~ :nth-child(7n + 3) {
+  color: #fab83d;
+}
+.ucupay-date-picker .ucupay-dp-calendar-item ul li:not(:first-child):before {
+  font-size: 18px;
+  line-height: 22px;
+  content: counter(date);
+  counter-increment: date;
+}
+.ucupay-date-picker li.today:before {
+  content: "今天" !important;
+  color: #d4b172;
+}
+.ucupay-date-picker li.disabled {
+  color: #ccc !important;
+}
+.ucupay-date-picker li.select {
+  background-color: #fff;
+}
+.ucupay-date-picker .ucupay-dp-header h3 {
+  text-align: center;
+  line-height: 39px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0;
+  background-color: #3a3a3a;
+  color: #fff;
+}
+.ucupay-date-picker .ucupay-dp-header button {
+  position: absolute;
+  top: 0;
+  background-color: #3a3a3a;
+  border: none;
+  color: #aaa;
+  padding: 0;
+  height: 39px;
+  line-height: 39px;
+  width: 3rem;
+}
+.ucupay-date-picker .ucupay-dp-header button.ucupay-dp-close-button {
+  left: 0;
+}
+.ucupay-date-picker .ucupay-dp-header button.ucupay-dp-confirm-button {
+  right: 0;
+  font-size: 1rem;
+}
+.ucupay-date-picker .ucupay-dp-labels {
+  border-top: 1px solid #ddd;
+  background-color: #ececec;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+}
+.ucupay-date-picker li {
+  color: #999;
+  list-style: none;
+  flex: 1;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 35px;
+}
+.ucupay-date-picker li.ucupay-dp-sunday,
+.ucupay-date-picker li.ucupay-dp-saturday {
+  color: #d4b172;
+}
+/*# sourceMappingURL=ucupay-date-picker.css.map */

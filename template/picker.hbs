@@ -1,0 +1,23 @@
+<div class="ucupay-date-picker static {{#if static}}static{{/if}} {{#if scattered}}scattered{{else}}continuous{{/if}}">
+    <header class="ucupay-dp-header">
+        <button type="button" class="ucupay-dp-close-button">&lt;</button>
+        <h3>选择时间</h3>
+        {{#if confirm}}
+            <button type="button" class="ucupay-dp-confirm-button">确定</button>
+        {{/if}}
+        <ul class="ucupay-dp-labels">
+            <li class="sunday">日</li>
+            <li class="">一</li>
+            <li class="">二</li>
+            <li class="">三</li>
+            <li class="">四</li>
+            <li class="">五</li>
+            <li class="saturday">六</li>
+        </ul>
+    </header>
+    <div class="ucupay-dp-container">
+        {{#each months}}
+            {{> calendar}}
+        {{/each}}
+    </div>
+</div>
